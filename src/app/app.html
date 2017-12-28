@@ -1,0 +1,9 @@
+<ion-menu [content]="myNav">
+   <ion-list>
+       <button ion-item *ngFor="let page of pages" (click)="gotoNewPage(page)">
+            <ion-icon name="{{ page.icon }}" item-left></ion-icon> {{ page.title }}
+       </button>
+   </ion-list> 
+</ion-menu>
+
+<ion-nav #myNav [root]="rootPage"></ion-nav>
